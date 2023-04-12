@@ -23,6 +23,17 @@ useEffect(() => {
   return (
     <>
       <h1>Hi</h1>
+      <div >
+ {cafe.map((shop) => {
+   return (
+     <div key={shop.id}>
+       <h4>Name: {shop.name}</h4>
+       <h5>Phone: {shop.phone}</h5>
+     </div>
+   )
+ })}
+</div>
+
     </>
   )
 }
