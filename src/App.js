@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import AddCafe from './components/AddCafe.js'
+import EditCafe from './components/EditCafe.js'
 
 const App = () => {
   let [cafe, setCafe] = useState([])
@@ -13,7 +14,6 @@ const App = () => {
       })
   }
   
-
   const handleCreateCafe = (addCafe) => {
     axios
       .post('http://localhost:8000/api/shops', addCafe)
@@ -34,6 +34,16 @@ const getCafes = () => {
 }
 
 
+const handleUpdateCafe = (editCafe) => {
+  console.log(editCafe)
+  axios
+    .put('http://localhost:8000/api/shops/' + editCafe.id, editCafe)
+    .then((response) => {
+      getCafes()
+    })
+}
+
+
 useEffect(() => {
  getCafes()
 }, [])
@@ -43,12 +53,13 @@ useEffect(() => {
       <h1>Hi</h1>
       <AddCafe handleCreateCafe={handleCreateCafe}/>
       <div >
- {cafe.map((shop) => {
+ {cafe.map((cafes) => {
    return (
-     <div key={shop.id}>
-       <h4>Name: {shop.name}</h4>
-       <h5>Phone: {shop.phone}</h5>
-       <button onClick={handleDelete} value={shop.id}>
+     <div key={cafes.id}>
+       <h4>Name: {cafes.name}</h4>
+       <h5>Phone: {cafes.phone}</h5>
+       <EditCafe handleUpdateCafe={handleUpdateCafe} cafes={cafes}/>
+       <button onClick={handleDelete} value={cafes.id}>
   X
 </button>
 
