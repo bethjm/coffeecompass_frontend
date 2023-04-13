@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import AddCafe from './components/AddCafe.js'
 
 const App = () => {
 
@@ -23,6 +24,7 @@ useEffect(() => {
   return (
     <>
       <h1>Hi</h1>
+      <AddCafe/>
       <div >
  {cafe.map((shop) => {
    return (
