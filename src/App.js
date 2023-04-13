@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 import AddCafe from './components/AddCafe.js'
 import EditCafe from './components/EditCafe.js'
+import DisplayCafes from './components/DisplayCafes.js'
+import LandingPage from './components/LandingPage.js'
+
 
 const App = () => {
   let [cafe, setCafe] = useState([])
 
-  const handleDelete = (event) => {
+  const handleDeleteCafe = (event) => {
     axios
       .delete('http://localhost:8000/api/shops/' + event.target.value)
       .then((response) => {
@@ -50,24 +54,14 @@ useEffect(() => {
 
   return (
     <>
-      <h1>Hi</h1>
-      <AddCafe handleCreateCafe={handleCreateCafe}/>
-      <div >
- {cafe.map((cafes) => {
-   return (
-     <div key={cafes.id}>
-       <h4>Name: {cafes.name}</h4>
-       <h5>Phone: {cafes.phone}</h5>
-       <EditCafe handleUpdateCafe={handleUpdateCafe} cafes={cafes}/>
-       <button onClick={handleDelete} value={cafes.id}>
-  X
-</button>
+    <Routes>
+      <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>
+      <Route path="/home" element={<LandingPage/>}/>
+      <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} />}/>
 
-     </div>
-   )
- })}
-</div>
+    </Routes>
 
+      <h1>App.js</h1>
     </>
   )
 }
