@@ -3,6 +3,17 @@ import axios from 'axios'
 import AddCafe from './components/AddCafe.js'
 
 const App = () => {
+  let [cafe, setCafe] = useState([])
+
+  const handleCreateCafe = (addCafe) => {
+    axios
+      .post('http://localhost:8000/api/shops', addCafe)
+      .then((response) => {
+        console.log(response)
+        getCafes()
+      })
+  }
+  
 
 const getCafes = () => {
  axios
@@ -11,11 +22,9 @@ const getCafes = () => {
      (response) => setCafe(response.data),
      (err) => console.error(err)
    )
-   .catch((error) => console.error(error))
+   .catch((err) => console.error(err))
 }
 
-
-  let [cafe, setCafe] = useState([])
 
 useEffect(() => {
  getCafes()
@@ -24,7 +33,7 @@ useEffect(() => {
   return (
     <>
       <h1>Hi</h1>
-      <AddCafe/>
+      <AddCafe handleCreateCafe={handleCreateCafe}/>
       <div >
  {cafe.map((shop) => {
    return (
