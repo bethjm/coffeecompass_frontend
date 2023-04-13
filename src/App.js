@@ -5,6 +5,15 @@ import AddCafe from './components/AddCafe.js'
 const App = () => {
   let [cafe, setCafe] = useState([])
 
+  const handleDelete = (event) => {
+    axios
+      .delete('http://localhost:8000/api/shops/' + event.target.value)
+      .then((response) => {
+        getCafes()
+      })
+  }
+  
+
   const handleCreateCafe = (addCafe) => {
     axios
       .post('http://localhost:8000/api/shops', addCafe)
@@ -14,7 +23,6 @@ const App = () => {
       })
   }
   
-
 const getCafes = () => {
  axios
    .get('http://localhost:8000/api/shops')
@@ -40,6 +48,10 @@ useEffect(() => {
      <div key={shop.id}>
        <h4>Name: {shop.name}</h4>
        <h5>Phone: {shop.phone}</h5>
+       <button onClick={handleDelete} value={shop.id}>
+  X
+</button>
+
      </div>
    )
  })}
