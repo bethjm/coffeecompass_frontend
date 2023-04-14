@@ -65,11 +65,27 @@ useEffect(() => {
     <Routes>
       <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>
       <Route path="/home" element={<LandingPage/>}/>
-      <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} />}/>
+      <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} cafe={cafe}/>}/>
 
     </Routes>
 
       <h1>App.js</h1>
+
+      {/* {cafe.map((cafes) => {
+        return (
+          <div key={cafes.id}>
+            <h4>Name: {cafes.name}</h4>
+            <h5>Phone: {cafes.phone}</h5>
+            <EditCafe handleUpdateCafe={handleUpdateCafe}/>
+            <button onClick={handleDeleteCafe} value={cafes.id}>
+       X
+     </button>
+     
+          </div>
+
+    
+        )
+      })} */}
     </>
   )
 }
