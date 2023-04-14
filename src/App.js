@@ -65,11 +65,12 @@ useEffect(() => {
     <Routes>
       <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>
       <Route path="/home" element={<LandingPage/>}/>
-      <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} />}/>
+      <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} cafe={cafe}/>}/>
 
     </Routes>
 
       <h1>App.js</h1>
+
     </>
   )
 }
