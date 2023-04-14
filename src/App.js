@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import axios from 'axios'
-import AddCafe from './components/AddCafe.js'
-import EditCafe from './components/EditCafe.js'
-import DisplayCafes from './components/DisplayCafes.js'
+import AddCafe from './components/Cafe/AddCafe.js'
+import EditCafe from './components/Cafe/EditCafe.js'
+import DisplayCafes from './components/Cafe/DisplayCafes.js'
 import LandingPage from './components/LandingPage.js'
 
 
