@@ -14,21 +14,35 @@ const DisplayCafes = (props) => {
   <div className="DisplayCafe">
 
 <NavBar/>
-        <p><Link to="/addcafe">Add Cafe</Link></p>
-        <p><Link to="/">Home</Link></p>
+        {/* <p><Link to="/addcafe">Add Cafe</Link></p>
+        <p><Link to="/">Home</Link></p> */}
 
 
     {props.cafe.map((cafes) => {
         return (
-          <div key={cafes.id}>
-            <h4>Name: {cafes.name}</h4>
-            <h5>Phone: {cafes.phone}</h5>
-            <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/>
-            <button onClick={props.handleDeleteCafe} value={cafes.id}>
-       X
-     </button>
+
+          <div key={cafes.id} className="cafe-item">
+
+            <div className="cafe-photo">
+            <img src={cafes.photo} alt={"picture of " + cafes.name} />
+            </div>
+
+            <div className="cafe-details">
+            <h4 id="cafe-name">{cafes.name}</h4>
+            <h5 id="location">{cafes.address}</h5>
+            <div className="cafe-flavor-notes">
+            <h5 id="cafe-box">{cafes.flavor_notes}</h5>
+            </div>
+            <h5>{cafes.description}</h5>
+            </div>
+            </div>
+            
+
      
-          </div>
+                    // {/* <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> */}
+    //         {/* <button onClick={props.handleDeleteCafe} value={cafes.id}>
+    //    X
+    //  </button> */}
 
     
         )

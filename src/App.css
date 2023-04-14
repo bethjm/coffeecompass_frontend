@@ -103,7 +103,7 @@
     margin-left: 1%;
     margin-top: 3%;
     font-size: 4vh;
-    font-family: 'SF Espresso Shack', sans-serif;
+    /* font-family: 'SF Espresso Shack', sans-serif; */
   }
   
   /* .search-bar{
@@ -114,12 +114,49 @@
 
   /* DISPLAY CAFE PAGE */
 
+  .DisplayCafe{
+    background-color: #F2F2F0;
+    height: 100vh;
+  }
+
+  .cafe-item{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  .cafe-photo{
+    display: flex;
+    margin-right: 3%;
+  }
 
 
+  #cafe-name {
+    font-size: 4vh;
+    height: .1vh;
+  }
 
-.DisplayCafe{
-  background-color: #F2F2F0;
+  #location {
+    font-size: 3vh;
+  }
+
+  #cafe-box{
+    background-color: #D9C2AD;
+    text-align: center;
+    width:10%;
+    height: 2.5vh;
+    padding-top: .5%;
+  }
+
+.cafe-details h5{
+  height: .6vh;
 }
+
+  .cafe-flavor-notes{
+    flex-direction: row;
+  }
+
 
 @media screen and (max-width: 415px) {
 
@@ -220,10 +257,10 @@
 width: 1000%;
 }
 
-
-
-
-
     /* DISPLAY CAFE PAGE */
+
+
+
+
   
 }
