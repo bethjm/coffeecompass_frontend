@@ -72,15 +72,15 @@ useEffect(() => {
 
   return (
     <>
-
+<div className="add-app-page">
+    <AddCafe handleCreateCafe={handleCreateCafe} />
+    <DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} cafe={cafe}/>
+    </div>
     <Routes>
-      <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>
+      <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}></Route>
+      <Route path="/cafes" element={<DisplayCafes cafe={cafe}/>}></Route>
       <Route path="/" element={<LandingPage/>}/>
-      <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} cafe={cafe}/>}/>
-
     </Routes>
-
-
     </>
   )
 }

@@ -19,8 +19,6 @@ const DisplayCafes = (props) => {
   <div className="DisplayCafe">
 
 <NavBar/>
-        {/* <p><Link to="/addcafe">Add Cafe</Link></p>
-        <p><Link to="/">Home</Link></p> */}
 
 
     {props.cafe.map((cafes) => {
@@ -53,14 +51,14 @@ const DisplayCafes = (props) => {
             </div>
             <h5 id="cafe-description">{cafes.description}</h5>
             </div>
+            <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/>
+           <button onClick={props.handleDeleteCafe} value={cafes.id}>
+      X
+    </button> 
             </div>
             
 
-     
-                    // {/* <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> */}
-    //         {/* <button onClick={props.handleDeleteCafe} value={cafes.id}>
-    //    X
-    //  </button> */}
+    
 
     
         )

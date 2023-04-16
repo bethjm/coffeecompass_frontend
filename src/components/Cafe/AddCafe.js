@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
+
+import NavBar from '../NavBar.js'
+
 
 const AddCafe = (props) => {
 
@@ -16,6 +20,9 @@ const AddCafe = (props) => {
 
   return (
     <>
+
+<NavBar/>
+
       <form onSubmit={handleSubmitCafe}>
       <label htmlFor="photo">Photo: </label>
         <input type="text" name="photo" value={cafe.photo} onChange={handleChangeCafe}/>
@@ -39,10 +46,6 @@ const AddCafe = (props) => {
         <br />
         <label htmlFor="description">Description: </label>
         <input type="text" name="description" value={cafe.description} onChange={handleChangeCafe} />
-        <br />
-        <br />
-        <label htmlFor="flavor_notes">Flavor notes: </label>
-        <input type="text" name="flavor_notes" value={cafe.flavor_notes} onChange={handleChangeCafe}/>
         <br />
         <br />
         <input type="submit"/>

@@ -210,6 +210,15 @@
 }
 
 
+
+/* APP.JS */
+
+.add-app-page{
+  display: none;
+  visibility: hidden;
+}
+
+
 @media screen and (max-width: 415px) {
 
   /* LANDING PAGE */
