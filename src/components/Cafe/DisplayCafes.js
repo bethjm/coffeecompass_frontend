@@ -4,7 +4,6 @@ import { Link, Route, Routes } from 'react-router-dom'
 import EditCafe from './EditCafe.js'
 
 import "../../App.css"
-import NavBar from '../NavBar.js'
 
 
 const DisplayCafes = (props) => {
@@ -17,11 +16,6 @@ const DisplayCafes = (props) => {
 
  return(
   <div className="DisplayCafe">
-
-{/* <NavBar/> */}
-        {/* <p><Link to="/addcafe">Add Cafe</Link></p>
-        <p><Link to="/">Home</Link></p> */}
-
 
     {props.cafe.map((cafes) => {
         return (
