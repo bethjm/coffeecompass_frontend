@@ -9,6 +9,11 @@ import NavBar from '../NavBar.js'
 
 const DisplayCafes = (props) => {
 
+  const [seeFlavors, setSeeFlavors] = useState(false);
+
+  const toggleAdd = () => {
+    setSeeFlavors(!seeFlavors);
+  };
 
  return(
   <div className="DisplayCafe">
@@ -31,9 +36,22 @@ const DisplayCafes = (props) => {
             <h4 id="cafe-name">{cafes.name}</h4>
             <h5 id="location">{cafes.address}</h5>
             <div className="cafe-flavor-notes">
-            <h5 id="cafe-box">{cafes.flavor_notes}</h5>
+            <button id="cafe-box" onClick={toggleAdd}>flavours</button>
+            {seeFlavors && (
+                      <div className="modal">
+                      <div onClick={toggleAdd} className="overlay"></div>
+                      <div className="modal-content">
+                        <div>I am modal</div>
+                      <button className="close-modal" onClick={toggleAdd}>
+              CLOSE
+            </button>
+          </div>
+        </div>
+      )}
+
+
             </div>
-            <h5>{cafes.description}</h5>
+            <h5 id="cafe-description">{cafes.description}</h5>
             </div>
             </div>
             
