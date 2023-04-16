@@ -2,6 +2,7 @@
                 
   /* LANDING PAGE */
 
+
 .LandingPage {
   background-color: #D4C6AC;
   height: 100vh;
@@ -115,15 +116,16 @@
   /* DISPLAY CAFE PAGE */
 
   .DisplayCafe{
+    padding-top: 5%;
     background-color: #F2F2F0;
-    height: 100vh;
+    height: 100%;
   }
 
   .cafe-item{
     display: flex;
     flex-direction: row;
     margin-left: 5%;
-    margin-top: 5%;
+    padding-bottom: 5%;
   }
 
   .cafe-photo{

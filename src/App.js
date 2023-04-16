@@ -65,13 +65,8 @@ useEffect(() => {
 <div className="logo-and-name">
 <img className="coffee-cup-nav-bar" src="https://i.imgur.com/SGaOl83.png" alt="a coffee cup with steam coming out of the top"/>
 <h1 className="nav-bar-title">coffee compass</h1>
-<nav>
-      <ul>
-        <li><Link to="/addcafe">Add Cafe</Link></li>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/cafes">See All Cafes</Link></li>
-      </ul>
-    </nav>
+        <a><Link to="/addcafe" id="remove-under-line">Add Beans</Link></a>
+        <a><Link to="/cafes" id="remove-under-line">See Beans</Link></a>
 
     </div>
 </div>
