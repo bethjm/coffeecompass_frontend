@@ -1,38 +1,330 @@
-.App {
+@import url('https://fonts.cdnfonts.com/css/sf-espresso-shack');
+                
+  /* LANDING PAGE */
+
+.LandingPage {
+  background-color: #D4C6AC;
+  height: 100vh;
+
+}
+
+.landing-page-center-photo{
+  height: 110vh;
+  width: 70vw;
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: -5%;
+  z-index: 0;
+
+}
+
+#remove-under-line {
+  text-decoration:none;
+}
+
+.landing-page-upper-photo{
+  position: absolute;
+  height: 70vh;
+  width: 60vw;
+  left: -8%;
+  top: -5%;
+  z-index: 0;
+}
+
+.landing-page-lower-photo{
+  visibility: hidden;
+}
+
+.landing-header{
+  font-family: 'SF Espresso Shack', sans-serif;
+  color: #3F3F40;
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 23%;
   text-align: center;
+  font-size: 70px;
+  font-size: 8vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.landing-text{
+  font-family: 'SF Espresso Shack', sans-serif;
+  color: #3F3F40;
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 38%;
+  text-align: center;
+  font-size: 6.3vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.see-all-button{
+  position: absolute;
+  left: 41.5%;
+  top: 65%;
+  z-index: 0;
+  border: none;
+  border-radius: 50px;
+  width: 12%;
+  padding: 1.3%;
+  background-color: #9ba698;
+  color: #3F3F40;
+  font-family: 'SF Espresso Shack Condensed', sans-serif;
+  font-size: 2.5vh;
+}
+
+  /* NAVBAR */
+  .NavBar{
+    background-color: #9BA698;
+    display: flex;
+    flex-direction: row;
   }
+  
+  .logo-and-name{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .coffee-cup-nav-bar{
+    margin-left: 1%;
+    width: 6vw;
+    height: 9vh;
+    min-width: 6vw;
+    min-height: 9vh;
+  }
+  
+  .nav-bar-title{
+    margin-left: 1%;
+    margin-top: 3%;
+    font-size: 4vh;
+    /* font-family: 'SF Espresso Shack', sans-serif; */
+  }
+  
+  /* .search-bar{
+  justify-content: flex-end;
+  width: 400px;
+
+  } */
+
+  /* DISPLAY CAFE PAGE */
+
+  .DisplayCafe{
+    background-color: #F2F2F0;
+    height: 100vh;
+  }
+
+  .cafe-item{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  .cafe-photo{
+    display: flex;
+    margin-right: 3%;
+  }
+
+
+  #cafe-name {
+    font-size: 4vh;
+    height: .1vh;
+  }
+
+  #location {
+    font-size: 3vh;
+  }
+
+  #cafe-box{
+    background-color: #D9C2AD;
+    text-align: center;
+    width:10%;
+    height: 2.5vh;
+    padding-top: .5%;
+  }
+
+
+.cafe-details h5{
+  height: .6vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* #cafe-description{
+  width: 100px;
+} */
+
+  .cafe-flavor-notes{
+    flex-direction: row;
+  }
+
+
+
+  /* MODAL ON DISPLAY PAGE */
+  body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+
+@media screen and (max-width: 415px) {
+
+  /* LANDING PAGE */
+
+  .landing-page-center-photo{
+    height: 50vh;
+    width: 110vw;
+    position: absolute;
+    left: -5%;
+    top: 25%;
+    z-index: 0;
+  }
+
+  .landing-page-upper-photo{
+    position: absolute;
+    height: 50vh;
+    width: 80vw;
+    left: -8%;
+    top: -5%;
+    z-index: 0;
+  }
+
+  .landing-page-lower-photo{
+    visibility: visible;
+    position: absolute;
+    height: 50vh;
+    width: 80vw;
+    transform: scaleY(-1) ;
+    left: -6%;
+    bottom: -5%;
+    z-index: 0;
+  }
+
+  .landing-header{
+    font-family: 'SF Espresso Shack', sans-serif;
+    color: #3F3F40;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    top: 16%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .landing-text{
+    font-family: 'SF Espresso Shack', sans-serif;
+    color: #3F3F40;
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    top: 69%;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .see-all-button{
+    position: absolute;
+    left: 35%;
+    top: 85%;
+    z-index: 0;
+    border: none;
+    border-radius: 50px;
+    width: 30%;
+    padding: 2%;
+    background-color: #9ba698;
+    color: #3F3F40;
+    font-family: 'SF Espresso Shack Condensed', sans-serif;
+  }
+
+    /* NAVBAR */
+.NavBar{
+  background-color: #9BA698;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-and-name{
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.coffee-cup-nav-bar{
+  margin-top: 2.5%;
+  margin-left: 1%;
+  width: 20vw;
+  height: 10vh;
+}
+
+.nav-bar-title{
+  font-size: 4vh;
+  font-family: 'SF Espresso Shack', sans-serif;
+  margin-top: 12%;
+  margin-left: 2%;
+}
+
+.search-bar{
+width: 1000%;
+}
+
+    /* DISPLAY CAFE PAGE */
+
+
+.cafe-item{
+  flex-direction: column;
+}
+
+#cafe-box{
+  width: 20%;
+}
+
+#cafe-description{
+  width: 180px;
+  word-wrap: break-word;
+}
+
+
+  
 }

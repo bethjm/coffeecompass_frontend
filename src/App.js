@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
 import axios from 'axios'
-import AddCafe from './components/AddCafe.js'
-import EditCafe from './components/EditCafe.js'
-import DisplayCafes from './components/DisplayCafes.js'
+import AddCafe from './components/Cafe/AddCafe.js'
+import EditCafe from './components/Cafe/EditCafe.js'
+import DisplayCafes from './components/Cafe/DisplayCafes.js'
 import LandingPage from './components/LandingPage.js'
+// import AddComment from './components/Comments/AddComment.js'
+// import EditComment from './components/Comments/EditComment.js'
+
 
 
 
 const App = () => {
+  // ========CAFE==========
   let [cafe, setCafe] = useState([])
 
   const handleDeleteCafe = (event) => {
@@ -48,6 +52,19 @@ const handleUpdateCafe = (editCafe) => {
     })
 }
 
+// ========COMMENTS==========
+
+let [comments, setComments] = useState([])
+
+// const getPeople = () => {
+//   axios
+//     .get('http://localhost:8000/api/contacts')
+//     .then(
+//       (response) => setPeople(response.data),
+//       (err) => console.error(err)
+//     )
+//     .catch((error) => console.error(error))
+//  }
 
 useEffect(() => {
  getCafes()
@@ -55,21 +72,14 @@ useEffect(() => {
 
   return (
     <>
-    <nav>
-      <ul>
-        <li><Link to="/addcafe">Add Cafe</Link></li>
-        <li><Link to="/home">Home</Link></li>
-        <li><Link to="/cafes">See All Cafes</Link></li>
-      </ul>
-    </nav>
+
     <Routes>
       <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>
-      <Route path="/home" element={<LandingPage/>}/>
+      <Route path="/" element={<LandingPage/>}/>
       <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} cafe={cafe}/>}/>
 
     </Routes>
 
-      <h1>App.js</h1>
 
     </>
   )
