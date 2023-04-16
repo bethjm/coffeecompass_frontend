@@ -47,14 +47,14 @@ const DisplayCafes = (props) => {
             </div>
             <h5 id="cafe-description">{cafes.description}</h5>
             </div>
+            {/* <button onClick={props.handleDeleteCafe} value={cafes.id}>
+       X
+     </button>  */}
             </div>
             
 
      
                     // {/* <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> */}
-    //         {/* <button onClick={props.handleDeleteCafe} value={cafes.id}>
-    //    X
-    //  </button> */}
 
     
         )
