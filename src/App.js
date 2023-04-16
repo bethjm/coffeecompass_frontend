@@ -5,8 +5,6 @@ import AddCafe from './components/Cafe/AddCafe.js'
 import EditCafe from './components/Cafe/EditCafe.js'
 import DisplayCafes from './components/Cafe/DisplayCafes.js'
 import LandingPage from './components/LandingPage.js'
-// import AddComment from './components/Comments/AddComment.js'
-// import EditComment from './components/Comments/EditComment.js'
 
 
 
@@ -54,17 +52,6 @@ const handleUpdateCafe = (editCafe) => {
 
 // ========COMMENTS==========
 
-let [comments, setComments] = useState([])
-
-// const getPeople = () => {
-//   axios
-//     .get('http://localhost:8000/api/contacts')
-//     .then(
-//       (response) => setPeople(response.data),
-//       (err) => console.error(err)
-//     )
-//     .catch((error) => console.error(error))
-//  }
 
 useEffect(() => {
  getCafes()
@@ -72,6 +59,22 @@ useEffect(() => {
 
   return (
     <>
+
+
+<div className="NavBar">
+<div className="logo-and-name">
+<img className="coffee-cup-nav-bar" src="https://i.imgur.com/SGaOl83.png" alt="a coffee cup with steam coming out of the top"/>
+<h1 className="nav-bar-title">coffee compass</h1>
+<nav>
+      <ul>
+        <li><Link to="/addcafe">Add Cafe</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/cafes">See All Cafes</Link></li>
+      </ul>
+    </nav>
+
+    </div>
+</div>
 
     <Routes>
       <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>

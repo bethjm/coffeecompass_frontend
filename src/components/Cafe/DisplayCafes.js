@@ -18,7 +18,7 @@ const DisplayCafes = (props) => {
  return(
   <div className="DisplayCafe">
 
-<NavBar/>
+{/* <NavBar/> */}
         {/* <p><Link to="/addcafe">Add Cafe</Link></p>
         <p><Link to="/">Home</Link></p> */}
 
