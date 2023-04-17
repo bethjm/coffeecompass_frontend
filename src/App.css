@@ -178,6 +178,11 @@
 .cafe-details h5{
   height: .6vh;
 }
+.this-is-a-column{
+  display:flex;
+  flex-direction: row;
+
+}
 
   .cafe-flavor-notes{
     flex-direction: row;

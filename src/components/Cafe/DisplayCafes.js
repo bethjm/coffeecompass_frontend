@@ -17,7 +17,7 @@ const DisplayCafes = (props) => {
   };
 
   const toggleMod = () => {
-    setModBeans(!ModBeans);
+    setModBeans(!seeFlavors);
   };
 
  return(
@@ -33,10 +33,14 @@ const DisplayCafes = (props) => {
             </div>
 
             <div className="cafe-details">
-            <h4 id="cafe-name">{cafes.name}</h4>
+      
+            <h4 id="cafe-name">{cafes.name}</h4>             
             <h5 id="location">{cafes.address}</h5>
+            <h5>${cafes.price} USD</h5>
+
             <div className="cafe-flavor-notes">
             <button id="cafe-box" onClick={toggleAdd}>flavour notes</button>
+            
             {seeFlavors && (
                       <div className="modal">
                       <div onClick={toggleAdd} className="overlay"></div>
@@ -45,13 +49,14 @@ const DisplayCafes = (props) => {
                         <p>acidic {cafes.acidic}</p>
                         <p>floral {cafes.floral}</p>
                         <p>citrus {cafes.citrus}</p>
+                        <p>berry {cafes.berry}</p>
+                        <p>chocolate {cafes.caramel}</p>
+                        <p>caramel {cafes.caramel}</p>
+                        <p>smoky {cafes.smoky}</p>
+                        <p>bitter {cafes.bitter}</p>
 
-                        {/* <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> 
 
-<button id="delete-button" onClick={props.handleDeleteCafe} value={cafes.id}>
-X
-</button>  */}
-<button onClick={toggleMod}>Edit beans</button>
+                        <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> 
 
                       <button className="close-modal" onClick={toggleAdd}>
               CLOSE
@@ -60,9 +65,11 @@ X
         </div>
       )}
 
-
             </div>
             <h5 id="cafe-description">{cafes.description}</h5>
+            <button id="delete-button" onClick={props.handleDeleteCafe} value={cafes.id}>
+toss beans
+</button> 
             </div>
             </div>
             
