@@ -37,7 +37,7 @@ const AddCafe = (props) => {
         <input type="text" name="description" value={cafe.description} onChange={handleChangeCafe} />
         <br />
         <br />
-        <label htmlFor="sweet">Sweetness level</label>
+        {/* <label htmlFor="sweet">Sweetness level</label>
         <input type="number" name="sweet" value={cafe.sweet} onChange={handleChangeCafe}/>
         <br />
         <br />
@@ -72,7 +72,7 @@ const AddCafe = (props) => {
         <label htmlFor="bitter">Bitter level</label>
         <input type="number" name="bitter" value={cafe.bitter} onChange={handleChangeCafe}/>
         <br />
-        <br />
+        <br /> */}
         <label htmlFor="price">Price</label>
         <input type="number" name="price" value={cafe.price} onChange={handleChangeCafe}/>
         <br />

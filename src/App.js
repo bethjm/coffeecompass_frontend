@@ -5,6 +5,8 @@ import AddCafe from './components/Cafe/AddCafe.js'
 import EditCafe from './components/Cafe/EditCafe.js'
 import DisplayCafes from './components/Cafe/DisplayCafes.js'
 import LandingPage from './components/LandingPage.js'
+import AddNotes from './components/FlavorNotes/AddNotes.js'
+
 
 
 
@@ -75,7 +77,6 @@ useEffect(() => {
       <Route path="/addcafe" element={<AddCafe handleCreateCafe={handleCreateCafe}/>}/>
       <Route path="/" element={<LandingPage/>}/>
       <Route path="/cafes" element={<DisplayCafes handleUpdateCafe={handleUpdateCafe} handleDeleteCafe={handleDeleteCafe} cafe={cafe}/>}/>
-
     </Routes>
 
 

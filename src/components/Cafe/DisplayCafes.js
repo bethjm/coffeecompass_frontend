@@ -35,7 +35,12 @@ const DisplayCafes = (props) => {
                       <div className="modal">
                       <div onClick={toggleAdd} className="overlay"></div>
                       <div className="modal-content">
-                        <div>I am modal</div>
+                        <p>sweetness {cafes.sweet}</p>
+                        <p>acidic {cafes.acidic}</p>
+                        <p>floral {cafes.floral}</p>
+                        <p>citrus {cafes.citrus}</p>
+                        <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> 
+
                       <button className="close-modal" onClick={toggleAdd}>
               CLOSE
             </button>
@@ -47,14 +52,13 @@ const DisplayCafes = (props) => {
             </div>
             <h5 id="cafe-description">{cafes.description}</h5>
             </div>
-            {/* <button onClick={props.handleDeleteCafe} value={cafes.id}>
+            <button onClick={props.handleDeleteCafe} value={cafes.id}>
        X
-     </button>  */}
+     </button> 
             </div>
             
 
      
-                    // {/* <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> */}
 
     
         )
