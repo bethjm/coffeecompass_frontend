@@ -36,7 +36,7 @@ const DisplayCafes = (props) => {
       
             <h4 id="cafe-name">{cafes.name}</h4>             
             <h5 id="location">{cafes.address}</h5>
-            <h5>${cafes.price} USD</h5>
+            <h5 id="number-font">${cafes.price} USD</h5>
 
             <div className="cafe-flavor-notes">
             <button id="cafe-box" onClick={toggleAdd}>flavour notes</button>
@@ -44,22 +44,22 @@ const DisplayCafes = (props) => {
             {seeFlavors && (
                       <div className="modal">
                       <div onClick={toggleAdd} className="overlay"></div>
-                      <div className="modal-content">
-                        <p>sweetness {cafes.sweet}</p>
-                        <p>acidic {cafes.acidic}</p>
-                        <p>floral {cafes.floral}</p>
-                        <p>citrus {cafes.citrus}</p>
-                        <p>berry {cafes.berry}</p>
-                        <p>chocolate {cafes.caramel}</p>
-                        <p>caramel {cafes.caramel}</p>
-                        <p>smoky {cafes.smoky}</p>
-                        <p>bitter {cafes.bitter}</p>
+                      <div className="modal-content" >
+                        <p>sweetness <span id="number-font">{cafes.sweet}/5</span></p>
+                        <p>acidic <span id="number-font">{cafes.acidic}/5</span></p>
+                        <p>floral <span id="number-font">{cafes.floral}/5</span></p>
+                        <p>citrus <span id="number-font">{cafes.citrus}/5</span></p>
+                        <p>berry <span id="number-font">{cafes.berry}/5</span></p>
+                        <p>chocolate <span id="number-font">{cafes.caramel}/5</span></p>
+                        <p>caramel <span id="number-font">{cafes.caramel}/5</span></p>
+                        <p>smoky <span id="number-font">{cafes.smoky}/5</span></p>
+                        <p>bitter <span id="number-font">{cafes.bitter}/5</span></p>
 
 
                         <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> 
 
-                      <button className="close-modal" onClick={toggleAdd}>
-              CLOSE
+                      <button className="close-modal" id="delete-button" onClick={toggleAdd}>
+              X
             </button>
           </div>
         </div>
