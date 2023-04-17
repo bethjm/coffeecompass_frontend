@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const AddCafe = (props) => {
 
-  let emptyCafe = { photo: '', }
+  let emptyCafe = { photo: '', name: '', phone: '', online_order: '', address: '', description: '', flavor_notes: '' }
   const [cafe, setCafe] = useState(emptyCafe)
 
   const handleChangeCafe = (event) => {
@@ -16,79 +16,18 @@ const AddCafe = (props) => {
 
   return (
     <>
+
+
+<img  className="edit-coffee-bag" src="https://i.imgur.com/UNmt9M3.png" alt="blank bag of coffee"/>
+
       <form onSubmit={handleSubmitCafe}>
-      <label htmlFor="photo">Photo: </label>
-        <input type="text" name="photo" value={cafe.photo} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="name">Name: </label>
-        <input type="text" name="name" value={cafe.name} onChange={handleChangeCafe} />
-        <br />
-        <br />
-        <label htmlFor="online_order">Link to order online: </label>
-        <input type="text" name="online_order" value={cafe.online_order} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="address">Address: </label>
-        <input type="text" name="address" value={cafe.address} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="description">Description: </label>
-        <input type="text" name="description" value={cafe.description} onChange={handleChangeCafe} />
-        <br />
-        <br />
-        <label htmlFor="sweet">Sweetness level</label>
-        <input type="number" name="sweet" value={cafe.sweet} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="acid">Acid level</label>
-        <input type="number" name="acid" value={cafe.acid} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="floral">Floral level</label>
-        <input type="number" name="floral" value={cafe.floral} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="citrus">Cirtus level</label>
-        <input type="number" name="citrus" value={cafe.citrus} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="berry">Berry level</label>
-        <input type="number" name="berry" value={cafe.berry} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="chocolate">Chocolate level</label>
-        <input type="number" name="chocolate" value={cafe.chocolate} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="caramel">Caramel level</label>
-        <input type="number" name="caramel" value={cafe.caramel} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="smoky">Smoky level</label>
-        <input type="number" name="smoky" value={cafe.smoky} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="bitter">Bitter level</label>
-        <input type="number" name="bitter" value={cafe.bitter} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="best_type">Best brew type</label>
-        <input type="text" name="best_type" value={cafe.best_type} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="price">Price</label>
-        <input type="text" name="price" value={cafe.price} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-
-
-
-
-
-
-
-        <input type="submit"/>
+        <input id="add-photo" htmlFor="photo" type="text" name="photo" value={cafe.photo} placeholder="photo of bag" onChange={handleChangeCafe}/>
+        <input id="add-name" htmlFor="name"type="text" name="name" value={cafe.name} placeholder="name of bag" onChange={handleChangeCafe} />
+        <input id="add-online" htmlFor="online_order" type="text" name="online_order" placeholder="link to order online" value={cafe.online_order} onChange={handleChangeCafe}/>
+        <input id="add-address" type="text" htmlFor="address" name="address" value={cafe.address} placeholder="address of cafe" onChange={handleChangeCafe}/>
+        <textarea  name="description" id="add-description" rows="6" cols="18" type="text" htmlFor="description" placeholder="describe the beans" value={cafe.description} onChange={handleChangeCafe}/>
+        <input id="add-price" type="number" htmlFor="price" name="price" placeholder="price of beans" value={cafe.price} onChange={handleChangeCafe}/>
+        <input type="submit" id="add-submit"/>
       </form>
     </>
   )
