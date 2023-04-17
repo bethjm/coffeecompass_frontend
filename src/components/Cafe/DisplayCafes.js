@@ -9,9 +9,15 @@ import "../../App.css"
 const DisplayCafes = (props) => {
 
   const [seeFlavors, setSeeFlavors] = useState(false);
+  const [ModBeans, setModBeans] = useState(false);
+
 
   const toggleAdd = () => {
     setSeeFlavors(!seeFlavors);
+  };
+
+  const toggleMod = () => {
+    setModBeans(!ModBeans);
   };
 
  return(
@@ -30,7 +36,7 @@ const DisplayCafes = (props) => {
             <h4 id="cafe-name">{cafes.name}</h4>
             <h5 id="location">{cafes.address}</h5>
             <div className="cafe-flavor-notes">
-            <button id="cafe-box" onClick={toggleAdd}>flavours</button>
+            <button id="cafe-box" onClick={toggleAdd}>flavour notes</button>
             {seeFlavors && (
                       <div className="modal">
                       <div onClick={toggleAdd} className="overlay"></div>
@@ -39,7 +45,13 @@ const DisplayCafes = (props) => {
                         <p>acidic {cafes.acidic}</p>
                         <p>floral {cafes.floral}</p>
                         <p>citrus {cafes.citrus}</p>
-                        <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> 
+
+                        {/* <EditCafe handleUpdateCafe={props.handleUpdateCafe} cafes={cafes}/> 
+
+<button id="delete-button" onClick={props.handleDeleteCafe} value={cafes.id}>
+X
+</button>  */}
+<button onClick={toggleMod}>Edit beans</button>
 
                       <button className="close-modal" onClick={toggleAdd}>
               CLOSE
@@ -52,9 +64,6 @@ const DisplayCafes = (props) => {
             </div>
             <h5 id="cafe-description">{cafes.description}</h5>
             </div>
-            <button onClick={props.handleDeleteCafe} value={cafes.id}>
-       X
-     </button> 
             </div>
             
 

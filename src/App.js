@@ -67,10 +67,15 @@ useEffect(() => {
 <div className="logo-and-name">
 <img className="coffee-cup-nav-bar" src="https://i.imgur.com/SGaOl83.png" alt="a coffee cup with steam coming out of the top"/>
 <h1 className="nav-bar-title">coffee compass</h1>
+<div className="bean-links" id="show-mobile-only">
         <a><Link to="/addcafe" id="remove-under-line">Add Beans</Link></a>
         <a><Link to="/cafes" id="remove-under-line">See Beans</Link></a>
-
+      </div>
     </div>
+    <div className="bean-links" id="show-desktop-only">
+        <a><Link to="/addcafe" id="remove-under-line">Add Beans</Link></a>
+        <a><Link to="/cafes" id="remove-under-line">See Beans</Link></a>
+      </div>
 </div>
 
     <Routes>

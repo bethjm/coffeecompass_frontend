@@ -37,42 +37,6 @@ const AddCafe = (props) => {
         <input type="text" name="description" value={cafe.description} onChange={handleChangeCafe} />
         <br />
         <br />
-        {/* <label htmlFor="sweet">Sweetness level</label>
-        <input type="number" name="sweet" value={cafe.sweet} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="acid">Acid level</label>
-        <input type="number" name="acid" value={cafe.acid} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="floral">Floral level</label>
-        <input type="number" name="floral" value={cafe.floral} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="citrus">Cirtus level</label>
-        <input type="number" name="citrus" value={cafe.citrus} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="berry">Berry level</label>
-        <input type="number" name="berry" value={cafe.berry} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="chocolate">Chocolate level</label>
-        <input type="number" name="chocolate" value={cafe.chocolate} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="caramel">Caramel level</label>
-        <input type="number" name="caramel" value={cafe.caramel} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="smoky">Smoky level</label>
-        <input type="number" name="smoky" value={cafe.smoky} onChange={handleChangeCafe}/>
-        <br />
-        <br />
-        <label htmlFor="bitter">Bitter level</label>
-        <input type="number" name="bitter" value={cafe.bitter} onChange={handleChangeCafe}/>
-        <br />
-        <br /> */}
         <label htmlFor="price">Price</label>
         <input type="number" name="price" value={cafe.price} onChange={handleChangeCafe}/>
         <br />
