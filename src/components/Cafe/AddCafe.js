@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const AddCafe = (props) => {
 
-  let emptyCafe = { photo: '', name: '', phone: '', online_order: '', address: '', description: '', flavor_notes: '' }
+  let emptyCafe = { photo: '', }
   const [cafe, setCafe] = useState(emptyCafe)
 
   const handleChangeCafe = (event) => {
@@ -38,39 +38,39 @@ const AddCafe = (props) => {
         <br />
         <br />
         <label htmlFor="sweet">Sweetness level</label>
-        <input type="text" name="sweet" value={cafe.sweet} onChange={handleChangeCafe}/>
+        <input type="number" name="sweet" value={cafe.sweet} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="acid">Acid level</label>
-        <input type="text" name="acid" value={cafe.acid} onChange={handleChangeCafe}/>
+        <input type="number" name="acid" value={cafe.acid} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="floral">Floral level</label>
-        <input type="text" name="floral" value={cafe.floral} onChange={handleChangeCafe}/>
+        <input type="number" name="floral" value={cafe.floral} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="citrus">Cirtus level</label>
-        <input type="text" name="citrus" value={cafe.citrus} onChange={handleChangeCafe}/>
+        <input type="number" name="citrus" value={cafe.citrus} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="berry">Berry level</label>
-        <input type="text" name="berry" value={cafe.berry} onChange={handleChangeCafe}/>
+        <input type="number" name="berry" value={cafe.berry} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="chocolate">Chocolate level</label>
-        <input type="text" name="chocolate" value={cafe.chocolate} onChange={handleChangeCafe}/>
+        <input type="number" name="chocolate" value={cafe.chocolate} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="caramel">Caramel level</label>
-        <input type="text" name="caramel" value={cafe.caramel} onChange={handleChangeCafe}/>
+        <input type="number" name="caramel" value={cafe.caramel} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="smoky">Smoky level</label>
-        <input type="text" name="smoky" value={cafe.smoky} onChange={handleChangeCafe}/>
+        <input type="number" name="smoky" value={cafe.smoky} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="bitter">Bitter level</label>
-        <input type="text" name="bitter" value={cafe.bitter} onChange={handleChangeCafe}/>
+        <input type="number" name="bitter" value={cafe.bitter} onChange={handleChangeCafe}/>
         <br />
         <br />
         <label htmlFor="best_type">Best brew type</label>
