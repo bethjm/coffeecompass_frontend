@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const AddCafe = (props) => {
 
-  let emptyCafe = { photo: '', }
+  let emptyCafe = { photo: '', name: '', phone: '', online_order: '', address: '', description: '', flavor_notes: '' }
   const [cafe, setCafe] = useState(emptyCafe)
 
   const handleChangeCafe = (event) => {
@@ -73,12 +73,8 @@ const AddCafe = (props) => {
         <input type="number" name="bitter" value={cafe.bitter} onChange={handleChangeCafe}/>
         <br />
         <br />
-        <label htmlFor="best_type">Best brew type</label>
-        <input type="text" name="best_type" value={cafe.best_type} onChange={handleChangeCafe}/>
-        <br />
-        <br />
         <label htmlFor="price">Price</label>
-        <input type="text" name="price" value={cafe.price} onChange={handleChangeCafe}/>
+        <input type="number" name="price" value={cafe.price} onChange={handleChangeCafe}/>
         <br />
         <br />
 
